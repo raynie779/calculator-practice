@@ -1,0 +1,71 @@
+/* BASIC SET-UP */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Lato', 'san-serif';
+	background: #d96256;
+}
+
+/* Content */
+
+table {
+	margin: auto;
+  	background-color: #95a5a6;
+  	width: 295px;
+  	max-width: 295px;
+  	height: 325px;
+  	border-radius: 4px;
+  	padding-right: 10px;
+  	margin-top: 100px;
+}
+
+.display input {
+	width: 280px;
+  	max-width: 275px;
+  	height: 100px;
+  	font-size: 26px;
+  	text-align: right;
+  	background-color: #ffffff;
+}
+
+input {
+  	outline: 0;
+  	position: relative;
+  	left: 5px;
+  	top: 5px;
+  	border: 0;
+  	color: #495069;
+  	background-color: #fff;
+  	border-radius: 4px;
+  	width: 50px;
+  	height: 50px;
+  	margin: 5px;
+  	font-size: 20px;
+  	box-shadow: 0 4px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+}
+
+.sum-equal .equal-sign input {
+	width: 200px;
+} 
+
+.slash input{
+	background-color: #f6b753;
+}
+
+.multiply input {
+	background-color: #f5b042;
+}
+
+.sub input {
+	background-color: #f5aa32;
+}
+
+.add input {
+	background-color: #f4a322;
+}
+
+.cancel input {
+	background-color: #f39c12;
+}

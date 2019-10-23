@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calculator</title>
+        <link rel="icon" href="images/favicon.png" />
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+        <!-- Font-Awesome CSS CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+        <!-- Base64 hash for Fonts -->
+        <link rel="stylesheet" href="css/fonts.css" />
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Content -->
+        
+        <form name="calculator">
+            <table>
+                <tr>
+                    <td colspan="4" class="display">
+                        <input type="text" name="display" id="result" placeholder="0" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="dis('7')"></td>
+                    <td><input type="button" value="8" onclick="dis('8')"></td>
+                    <td><input type="button" value="9" onclick="dis('9')"></td>
+                    <td class="slash"><input type="button" value="/" onclick="dis('/')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="dis('4')"></td>
+                    <td><input type="button" value="5" onclick="dis('5')"></td>
+                    <td><input type="button" value="6" onclick="dis('6')"></td>
+                    <td class="multiply"><input type="button" value="*" onclick="dis('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="dis('1')"></td>
+                    <td><input type="button" value="2" onclick="dis('2')"></td>
+                    <td><input type="button" value="3" onclick="dis('3')"></td>
+                    <td class="sub"><input type="button" value="-" onclick="dis('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="dis('0')"></td>
+                    <td><input type="button" value="00" onclick="dis('00')"></td>
+                    <td><input type="button" value="." onclick="dis('.')"></td>
+                    <td class="add"><input type="button" value="+" onclick="dis('+')"></td>
+                </tr>
+                <tr class="sum-equal">
+                    <td colspan="3" class="equal-sign"><input type="button" value="=" onclick="solve()"></td>
+                    <td class="cancel"><input type="button" value="C" onclick="clr()"></td>
+                </tr>
+            </table>
+        </form>
+
+        
+        
+    
+
+        <!-- Body ends here -->
+
+        <script> 
+            //function that display value
+            var resultshown = false;
+
+
+            function dis(val) { 
+
+                if(resultshown){
+                    clr();
+                    resultshown = false
+                }
+                document.getElementById("result").value+=val 
+            }
+
+            function 
+
+
+           
+            //function that evaluates the digit and return result 
+            function solve() { 
+               let x = document.getElementById("result").value 
+               let  y = eval(x) 
+                document.getElementById("result").value = y
+
+                resultshown = true
+
+
+            } 
+           
+            //function that clear the display 
+            function clr() { 
+                document.getElementById("result").value = "" 
+            } 
+        </script>
+        
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
