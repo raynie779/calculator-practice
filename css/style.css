@@ -29,6 +29,10 @@ table {
   	background-color: #ffffff;
 }
 
+#result {
+  display: none;
+}
+
 input {
   	outline: 0;
   	position: relative;
